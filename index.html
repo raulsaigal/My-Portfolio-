@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
+    <link rel="icon" href="userAsset/NavLogo.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="userAsset/NavLogo.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="userAsset/NavLogo.jpg">
+
+
+</head>
+
+<body>
+    <div class="page-loader">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+    <div id="wrapper">
+        <!-- Contaniner for first create a nav bar -->
+        <div class="container">
+
+            <!-- First creating the nav-logo which contain name image and text -->
+            <div class="navbar">
+
+                <div class="logo-container">
+                    <!-- Animated initial logo -->
+                    
+                    <div class="text-logo">Rahul Raj</div>
+                </div>
+
+                <!-- Second in nav bar we creating the nav items which contain hyperlink like -- projects,skills and contact me -->
+                <div class="nav-itmes" id="primary-navigation" role="navigation" aria-label="Primary">
+                    <!-- First items is project jo ki achor tag hai jo hume bookmark ke tor per use karna hai. -->
+                    <div><a class="nav-link" href="#projects">Projects</a></div>
+                    <div><a class="nav-link" href="#skills">Skills</a></div>
+                    <div><a class="nav-link" href="#contact">Contact Me</a></div>
+                </div>
+
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+
+                <div class="mode-toggle">
+                    <i id="theme-icon" class="fa-solid fa-moon" aria-hidden="true"></i>
+                </div>
+                
+
+
+
+            </div>
+
+            <div class="hero-section">
+
+                <div class="faded-text">Rahul
+                    <div class="faded-text" id="title">Raj</div>
+                </div>
+
+                <div class="hero-section-left">
+                    <div class="hero-section-heading">Hi! Rahul Raj</div>
+
+                    <!-- Both properties of hero section-heading or hero-section-subheading thats why we take same class in this property-->
+                    <div class=" hero-section-heading hero-section-subheading">
+                        <!-- The property of after subheading is different so that's why we create a new class called role -->
+                        I am a <span class="role"></span>
+                    </div>
+
+                    <div class="hero-section-description">
+                        I am a frontend developer and here is my portfolio website.Here you'll
+                        learn about my journey as a software developer.
+                    </div>
+                    <a href="https://drive.google.com/file/d/1eJVLt1qD2wyTcHVgl4Ke-nxQo52aQ1Jh/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                        <button class="button" id="btn">Hire Me</button>
+                    </a>
+                </div>
+
+                <div class="hero-section-right">
+                    <div class="absolute icons icon-dots">
+                        <img src="userAsset/dots.png" alt="decorative dots" loading="lazy" decoding="async">
+                    </div>
+                    <div class="absolute icons icon-cube">
+                        <img src="userAsset/cube.png" alt="decorative cube" loading="lazy" decoding="async">
+                    </div>
+                    <div class="absolute icons icon-circle">
+                        <img src="userAsset/circle.png" alt="decorative circle" loading="lazy" decoding="async">
+                    </div>
+                    <div class="absolute icons icon-zigzag">
+                        <img src="userAsset/zigzags.png" alt="decorative zigzags" loading="lazy" decoding="async">
+                    </div>
+                    <div class="absolute icons icon-plus">
+                        <img src="userAsset/plus.png" alt="decorative plus" loading="lazy" decoding="async">
+                    </div>
+                    <div class="user-image">
+                        <img src="userAsset/IMG_20220325_224517.jpg" alt="Rahul Raj portrait" height="500" width="350" loading="lazy" decoding="async">
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section" id="projects">
+            <h2 class="page-header">Projects</h2>
+
+            <div class="project-container">
+                <div class="project-card" id="project1">
+                    <div class="project-number project-number-right">01</div>
+
+                    <div class="project-content project-content-left">
+                        <div class="project-skills-container">
+                            <img src="stack/HTML.png" alt="HTML" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/CSS.png" alt="CSS" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Javascript.svg" alt="JavaScript" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Tailwind.png" alt="Tailwind CSS" class="project-skills" loading="lazy" decoding="async">
+
+                        </div>
+                        <h2 class="project-heading">Dev Detective </h2>
+                        <p class="project-subheading">Simplify Your Search for Coding Brilliance
+                        </p>
+                        <div class="btn-group">
+                            <a href="https://raulsaigal.github.io/Saigal-Detecitive-Project/" target="_blank" rel="noopener noreferrer">
+                                <button class="button button-project">View</button>
+                            </a>
+                            
+
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="project2">
+                    <div class="project-number project-number-left">02</div>
+
+                    <div class="project-content project-content-right" id="pr2">
+                        <div class="project-skills-container" id="pr2">
+                            <img src="stack/HTML.png" alt="HTML" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/CSS.png" alt="CSS" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Javascript.svg" alt="JavaScript" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/NextJsCircle.png" alt="Next.js" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Tailwind.png" alt="Tailwind CSS" class="project-skills" loading="lazy" decoding="async">
+
+                        </div>
+                        <h2 class="project-heading">Weather App</h2>
+                        <p class="project-subheading">
+                            Real-Time Weather Updates at Your Fingertips
+                        </p>
+                        <div class="btn-group">
+                            <a href="https://raulsaigal.github.io/Weather-App/" target="_blank" rel="noopener noreferrer">
+                                <button class="button button-project">View</button>
+                            </a>
+
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" id="project3">
+                    <div class="project-number project-number-right">03</div>
+
+                    <div class="project-content project-content-left" id="pr3">
+                        <div class="project-skills-container" id="pr3">
+                            <img src="stack/HTML.png" alt="HTML" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/CSS.png" alt="CSS" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Javascript.svg" alt="JavaScript" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/NextJsCircle.png" alt="Next.js" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Tailwind.png" alt="Tailwind CSS" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Vercel.svg" alt="Vercel" class="project-skills" loading="lazy" decoding="async">
+                        </div>
+                        <h2 class="project-heading">Password Generator</h2>
+                        <p class="project-subheading">
+                            Effortlessly Create Complex and Reliable Passwords
+                        </p>
+                        <div class="btn-group">
+                            <a href="https://raulsaigal.github.io/Password-Generator/" target="_blank" rel="noopener noreferrer">
+                                <button class="button button-project">View</button>
+                            </a>
+
+
+                         
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="project-card" id="project4">
+                    <div class="project-number project-number-left">04</div>
+
+                    <div class="project-content project-content-right">
+                        <div class="project-skills-container">
+                            <img src="stack/React.png" alt="React" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/NodeJs.svg" alt="Node.js" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Tailwind.png" alt="Tailwind CSS" class="project-skills" loading="lazy" decoding="async">
+                            <img src="stack/Vercel.svg" alt="Vercel" class="project-skills" loading="lazy" decoding="async">
+                        </div>
+                        <h2 class="project-heading">Movie Gallery</h2>
+                        <p class="project-subheading">
+                            The website for recommending Movies
+                        </p>
+                        <div class="btn-group">
+                            <a href="https://movie-011.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                <button class="button button-project">View</button>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills" class="container skills-container">
+            <div class="skill-faded-text">Skills</div>
+
+
+            <div class="skills-container-left">
+                <h2 class="skills-heading">
+                    <span class="caps">M</span>e and <br>
+                    MyTech Stack
+                </h2>
+
+                <div class="skills-subheading">
+                    <p>Hi Everyone My name is Rahul Raj I am a Full Stack Web Developer and I am a first year college
+                        student pursuing my B.tech
+                        from COER
+                        and Currently I am seeking internships with a Budding Startup in INDIA and a full Time
+                        Freelancer. Currently
+                        I am
+                        finding on NextJs and Making Beautiful UI-UX are my fey features</p>
+                    <p>I am a passionate web developer actively seeking internships in renowned
+                        tech companies like Google, Microsoft, Amazon, Adobe, TCS, and Wipro.
+                        With a strong foundation in web development and hands on experience in
+                        several projects, I am eager to contribute my skills to real-world
+                        applications.</p>
+                    <p>As a national volleyball player and a sports coordinator, I bring teamwork, discipline, and a
+                        competitive edge to everything I do, including web development. My diverse experiences shape my
+                        ability to adapt and thrive in dynamic environments.</p>
+                </div>
+            </div>
+
+            <div class="skills-container-right">
+                <img src="userAsset/blob vector.png" class="blob-style" alt="decorative blob" loading="lazy" decoding="async">
+
+                <img src="stack/HTML.png" alt="HTML" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/CSS.png" alt="CSS" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/Javascript.svg" alt="JavaScript" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/React.png" alt="React" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/NodeJs.svg" alt="Node.js" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/Next.svg" alt="Next.js" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/Redux.svg" alt="Redux" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/Tailwind.png" alt="Tailwind CSS" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/Bootstrap.svg" alt="Bootstrap" class="skills-logo" loading="lazy" decoding="async">
+                
+                <img src="stack/Express.png" alt="Express" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/Git.svg" alt="Git" class="skills-logo" loading="lazy" decoding="async">
+                <img src="stack/Github.svg" alt="GitHub" class="skills-logo" loading="lazy" decoding="async">
+                
+                <img src="stack/MongoDB.svg" alt="MongoDB" class="skills-logo" loading="lazy" decoding="async">
+                
+               
+            </div>
+        </div>
+
+        <div class="contactus-form-container" id="contact">
+            <div class="container">
+
+                <h1 class="contactus-heading">Contact Me</h1>
+
+                <h3 class="contactus-subheading">Questions,Thoughts or Just Want To Say Hello?</h3>
+
+
+                <!-- <div class="contactus-forms-container">
+                    <form class="form" action="">
+>>>>>>> 3b3f183 (first commit)
+                        <div class="formfield-container">
+                            <input class="formfield" type="text" name="name" id="name" placeholder="Enter your name" required>
+                            <input class="formfield" type="email" name="email" id="email" placeholder="Enter your email address" required>
+                            <input class="formfield" type="text" name="subject" id="subject" placeholder="Enter your subject" required>
+                            <textarea name="message" id="message" cols="30" rows="10" class="formfield formfield-textarea" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button class="button" type="submit" id="submit-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div> -->
+                <div class="contactus-forms-container">
+                    <h2 style="text-align:center; margin-bottom: 15px; color: #bd0606;">Get in Touch</h2>
+                    <form class="form" id="contact-form" novalidate>
+                        <input type="hidden" name="access_key" id="web3forms_key" value="REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY">
+                        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+                        <div class="formfield-container">
+                            <input class="formfield" type="text" name="name" id="name" placeholder="Enter your name" autocomplete="name" required>
+                            <input class="formfield" type="email" name="email" id="email" placeholder="Enter your email address" autocomplete="email" required>
+                            <input class="formfield" type="text" name="subject" id="subject" placeholder="Enter your subject" required>
+                            <textarea name="message" id="message" cols="30" rows="10" class="formfield formfield-textarea" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                        <button class="button" type="submit" id="submit-btn" aria-label="Send Message">
+                          <span class="btn-spinner" aria-hidden="true"></span>
+                          <span class="btn-label">Send Message</span>
+                          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            
+                <script>
+                    const formEl = document.getElementById('contact-form');
+                    const statusEl = document.getElementById('form-status');
+                    const submitBtn = document.getElementById('submit-btn');
+                    const btnLabel = submitBtn?.querySelector('.btn-label');
+                    const btnIcon = submitBtn?.querySelector('i');
+                    const accessKeyEl = document.getElementById('web3forms_key');
+
+                    function setLoading(isLoading) {
+                      if (!submitBtn) return;
+                      submitBtn.classList.toggle('loading', isLoading);
+                      submitBtn.disabled = isLoading;
+                      if (btnLabel) btnLabel.textContent = isLoading ? 'Sending...' : 'Send Message';
+                    }
+
+                    function setStatus(message, type = 'info') {
+                      if (!statusEl) return;
+                      statusEl.textContent = message;
+                      statusEl.className = `form-status ${type}`;
+                    }
+
+                    formEl?.addEventListener('submit', async (event) => {
+                      event.preventDefault();
+
+                      const formData = new FormData(formEl);
+                      const name = formData.get('name');
+                      const email = formData.get('email');
+                      const subject = formData.get('subject');
+                      const message = formData.get('message');
+
+                      if (!name || !email || !subject || !message) {
+                        setStatus('Please fill in all fields.', 'error');
+                        formEl.classList.remove('success');
+                        formEl.classList.add('error');
+                        return;
+                      }
+
+                      const accessKey = accessKeyEl?.value?.trim();
+                      if (!accessKey || accessKey === 'REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY') {
+                        setStatus('Form email is not configured yet. Add your Web3Forms access key in the hidden field.', 'error');
+                        formEl.classList.remove('success');
+                        formEl.classList.add('error');
+                        return;
+                      }
+
+                      // Optional: better subject in inbox
+                      formData.set('subject', `[Portfolio] ${subject}`);
+                      formData.set('from_name', String(name));
+                      formData.set('from_email', String(email));
+
+                      try {
+                        setLoading(true);
+                        setStatus('Sending...', 'info');
+                        const response = await fetch('https://api.web3forms.com/submit', {
+                          method: 'POST',
+                          body: formData
+                        });
+                        const data = await response.json();
+
+                        if (data.success) {
+                          setStatus('Thank you! Your message has been sent successfully.', 'success');
+                          formEl.classList.remove('error');
+                          formEl.classList.add('success');
+                          formEl.reset();
+                        } else {
+                          throw new Error(data.message || 'Something went wrong.');
+                        }
+                      } catch (err) {
+                        setStatus('Failed to send. Please try again later.', 'error');
+                        formEl.classList.remove('success');
+                        formEl.classList.add('error');
+                      } finally {
+                        setLoading(false);
+                        setTimeout(() => {
+                          formEl.classList.remove('success');
+                          formEl.classList.remove('error');
+                          setStatus('', 'info');
+                        }, 4000);
+                      }
+                    });
+                </script>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="footer-wrapper">
+
+                    <div class="footer-faded-text">
+                        
+                        Rahul Raj
+                    </div>
+                    <div class="link-wrapper">
+                        <div>
+                            <a class="nav-link" href="#projects">Projects 
+                                
+                            </a>
+                        </div>
+                        <div>
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </div>
+                        <div>
+                            <a class="nav-link" href="#contact">Contact Me</a>
+                        </div>
+                    </div>
+
+                    <div class="icon-wrapper">
+                        <a href="https://www.linkedin.com/in/rahul-raj-970426228" target="_blank" rel="noopener noreferrer"> 
+                            <i class="fa-brands fa-linkedin icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/raulsaigal" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://x.com/RahulSaigal7" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-twitter icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/___saigal___51___/" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram icon" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:rr7426151@gmail.com">
+                            <i class="fa-regular fa-envelope icon" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+
+                    
+                    
+
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+    <div class="scroll-to-top" aria-label="Scroll to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    
+    <script>
+      // Page loader
+      window.addEventListener('load', () => {
+        const loader = document.querySelector('.page-loader');
+        setTimeout(() => {
+          loader.classList.add('fade-out');
+        }, 1000);
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const modeToggle = document.getElementById("theme-icon");
+        const body = document.body;
+        const themeMeta = document.getElementById('theme-color-meta');
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('primary-navigation');
+        const navbar = document.querySelector('.navbar');
+        
+        // Load saved theme preference from localStorage
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === 'dark-mode') {
+            body.classList.add('dark-mode');
+            updateIcon('dark-mode');
+            if (themeMeta) themeMeta.setAttribute('content', '#121212');
+        } else {
+            if (themeMeta) themeMeta.setAttribute('content', '#ffffff');
+            updateIcon('light-mode');
+        }
+    
+        modeToggle.addEventListener("click", () => {
+            // add click micro-animations
+            modeToggle.classList.remove('icon-spin');
+            void modeToggle.offsetWidth; // restart animation
+            modeToggle.classList.add('icon-spin', 'icon-pulse');
+
+            const isDark = body.classList.toggle("dark-mode");
+            localStorage.setItem("theme", isDark ? "dark-mode" : "light-mode");
+            updateIcon(isDark ? "dark-mode" : "light-mode");
+            if (themeMeta) themeMeta.setAttribute('content', isDark ? '#121212' : '#ffffff');
+
+            // clean up pulse class after anim
+            setTimeout(() => modeToggle.classList.remove('icon-pulse'), 800);
+        });
+    
+        function updateIcon(mode) {
+            // ensure correct icon + smooth transition class
+            if (mode === "dark-mode") {
+                modeToggle.classList.remove("fa-sun");
+                modeToggle.classList.add("fa-moon");
+            } else {
+                modeToggle.classList.remove("fa-moon");
+                modeToggle.classList.add("fa-sun");
+            }
+        }
+        
+        // Mobile nav toggle
+        hamburger.addEventListener('click', () => {
+          const isOpen = nav.classList.toggle('open');
+          hamburger.classList.toggle('open', isOpen);
+          hamburger.setAttribute('aria-expanded', String(isOpen));
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        // Close mobile nav on link click
+        nav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            if (nav.classList.contains('open')) {
+              nav.classList.remove('open');
+              hamburger.classList.remove('open');
+              hamburger.setAttribute('aria-expanded', 'false');
+              document.body.style.overflow = '';
+            }
+          });
+        });
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && nav.classList.contains('open')) {
+            nav.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+        
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (!targetId || targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+                if (!targetElement) return;
+                e.preventDefault();
+                const headerOffset = 80; // Adjust based on your header height
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            });
+        });
+        
+        // IntersectionObserver for reveal animations
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.project-card, .skills-container-left, .skills-container-right, .contactus-heading, .contactus-subheading, .form')
+          .forEach(el => revealObserver.observe(el));
+
+        // Scrollspy: highlight active nav link
+        const sections = [
+          document.getElementById('projects'),
+          document.getElementById('skills'),
+          document.getElementById('contact')
+        ].filter(Boolean);
+        const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+        const linkForId = (id) => navLinks.find(a => a.getAttribute('href') === `#${id}`);
+
+        const spyObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            const link = linkForId(entry.target.id);
+            if (!link) return;
+            if (entry.isIntersecting) {
+              navLinks.forEach(l => l.classList.remove('active-link'));
+              link.classList.add('active-link');
+              link.setAttribute('aria-current', 'page');
+            }
+          });
+        }, { rootMargin: '-50% 0px -45% 0px', threshold: 0.01 });
+        sections.forEach(sec => spyObserver.observe(sec));
+
+        // Navbar shadow on scroll
+        const onScroll = () => {
+          if (window.pageYOffset > 10) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        };
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('show');
+          } else {
+            scrollToTopBtn.classList.remove('show');
+          }
+        }, { passive: true });
+
+        scrollToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    });
+    </script>
+    <script>
+        var typeData = new Typed(".role", {
+            strings: [
+                "Frontend Developer",
+                "Web Developer",
+                "Backend Developer",
+                "UI/UX Designer",
+                "Full Stack Developer",
+                "Coder"
+            ],
+            loop: true,
+            typeSpeed: 100,
+            backSpeed: 80,
+            backDelay: 1000,
+        });
+    </script>
+</body>
+
+</html>
