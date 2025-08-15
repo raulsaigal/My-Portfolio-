@@ -456,12 +456,33 @@
     
     <script>
       // Page loader
-      window.addEventListener('load', () => {
+      // window.addEventListener('load', () => {
+        (function() {
         const loader = document.querySelector('.page-loader');
-        setTimeout(() => {
+      //   setTimeout(() => {
+      //     loader.classList.add('fade-out');
+      //   }, 1000);
+      // });
+            if (!loader) return;
+
+        let hasHidden = false;
+        const hide = () => {
+          if (hasHidden) return;
+          hasHidden = true;
           loader.classList.add('fade-out');
-        }, 1000);
-      });
+        };
+            if (document.readyState === 'interactive' || document.readyState === 'complete') {
+          setTimeout(hide, 150);
+        } else {
+          document.addEventListener('DOMContentLoaded', () => setTimeout(hide, 150), { once: true });
+        }
+
+        // Ensure hidden after full load as well
+        window.addEventListener('load', () => setTimeout(hide, 0), { once: true });
+
+        // Hard fallback in case events are delayed
+        setTimeout(hide, 2000);
+      })();
 
       document.addEventListener("DOMContentLoaded", () => {
         const modeToggle = document.getElementById("theme-icon");
@@ -537,18 +558,28 @@
         });
         
         // Smooth scroll for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (!targetId || targetId === '#') return;
-                const targetElement = document.querySelector(targetId);
-                if (!targetElement) return;
-                e.preventDefault();
-                const headerOffset = 80; // Adjust based on your header height
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-            });
+        // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        //     anchor.addEventListener('click', function(e) {
+        //         const targetId = this.getAttribute('href');
+        //         if (!targetId || targetId === '#') return;
+        //         const targetElement = document.querySelector(targetId);
+        //         if (!targetElement) return;
+        //         e.preventDefault();
+        //         const headerOffset = 80; // Adjust based on your header height
+        //         const elementPosition = targetElement.getBoundingClientRect().top;
+        //         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        //         window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        //     });
+            // Smooth scroll for in-page links (respects CSS scroll-margin-top)
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+          anchor.addEventListener('click', function(e) {
+            var targetId = anchor.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+            var target = document.querySelector(targetId);
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
         });
         
         // IntersectionObserver for reveal animations
