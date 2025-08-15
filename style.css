@@ -86,7 +86,10 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+/*   transition: opacity 0.5s ease, visibility 0.5s ease; */
+  transition: opacity 0.35s cubic-bezier(.4,0,.2,1), visibility 0.35s linear, filter 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
+  transform: scale(1);
+  will-change: opacity, transform, filter;
 }
 
 .dark-mode .page-loader {
@@ -96,15 +99,24 @@ body::-webkit-scrollbar {
 .page-loader.fade-out {
   opacity: 0;
   visibility: hidden;
+  transform: scale(1.02);
+  filter: blur(2px);
 }
 
 .spinner {
-  width: 60px;
-  height: 60px;
-  border: 5px solid rgba(var(--primary-color-rgb), 0.3);
-  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  border: 5px solid rgba(var(--primary-color-rgb), 0.25);
+  border-right-color: rgba(var(--primary-color-rgb), 0.45);
   border-top-color: var(--primary-color);
-  animation: spin 1s ease-in-out infinite;
+/*   animation: spin 1s ease-in-out infinite; */
+border-radius: 50%;
+  animation: spin 0.9s cubic-bezier(.4,0,.2,1) infinite, spinnerEnter 0.35s ease;
+}
+
+@keyframes spinnerEnter {
+  from { transform: scale(0.96); opacity: 0.6; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 @keyframes spin {
@@ -117,6 +129,16 @@ body::-webkit-scrollbar {
   color: var(--text-color);
   letter-spacing: 3px;
   animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Smooth exit for inner elements */
+.page-loader .spinner, .page-loader .loading-text {
+  will-change: transform, opacity;
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1), opacity 0.35s cubic-bezier(.4,0,.2,1);
+}
+.page-loader.fade-out .spinner, .page-loader.fade-out .loading-text {
+  transform: translateY(-6px);
+  opacity: 0;
 }
 
 .dark-mode {
